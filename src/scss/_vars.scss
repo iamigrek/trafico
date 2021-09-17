@@ -1,0 +1,34 @@
+:root {
+  //COLORS
+  --white: #fff;
+  --black: #000;
+  --woody-brown: #402b2b;
+  --cinnabar: #ee4d47;
+  --cinderella: #fef4f0;
+  --provincial-pink: #fdede8;
+  --sauvignon: #fff7f5;
+  --givry: #f9cbc5;
+  --main: #e5e5e5;
+  //FONTS
+  --font-rubik: "rubik";
+  --font-dm: "dm";
+
+  //TEXT
+  --menu: 700 16px / 19px var(--font-rubik);
+  --main-title: 400 100px / 100px var(--font-dm);
+  --main-title-tablet: 400 50px / 65px var(--font-dm);
+  --main-subtitle: 400 48px / 67px var(--font-dm);
+  --main-subtitle-tablet: 400 30px / 30px var(--font-dm);
+  --section-title: 700 24px / 40px var(--font-rubik);
+  --big-btn: 700 18px / 19px var(--font-rubik);
+
+  --section-text: 300 18px / 40px var(--font-rubik);
+  --faq-text: 300 18px / 30px var(--font-rubik);
+  --faq-text-mobile: 300 15px / 16px var(--font-rubik);
+  --section-text: 300 18px / 40px var(--font-rubik);
+  --big-text: 500 24px / 36px var(--font-rubik);
+  --contact-text: 400 20px / 30px var(--font-rubik);
+  --bottom-menu: 400 16px / 19px var(--font-rubik);
+  --faq-title: 500 18px / 30px var(--font-rubik);
+  --faq-title-mobile: 500 14px / 15px var(--font-rubik);
+}

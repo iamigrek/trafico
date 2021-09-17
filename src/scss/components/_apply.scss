@@ -1,0 +1,63 @@
+.apply {
+  padding: 150px 0 150px;
+  @include tablet {
+    padding: 100px 0 100px;
+  }
+  @include mobile {
+    padding-top: 280px;
+  }
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 509px;
+      height: 420px;
+      background-image: url(../img/apply-bg.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include tablet {
+        width: 331px;
+        height: 270px;
+        left: 20px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      @include mobile {
+        top: -280px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  &__title {
+    max-width: 455px;
+    margin-bottom: 40px;
+    @include tablet {
+      text-align: end;
+    }
+    @include mobile {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    max-width: 455px;
+    font: var(--section-text);
+    @include tablet {
+      max-width: 400px;
+      text-align: end;
+    }
+    @include mobile {
+      max-width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+}

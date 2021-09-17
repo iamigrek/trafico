@@ -1,0 +1,109 @@
+.contacts {
+  background-image: url(../img/bottom-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__container {
+    padding: 100px 0;
+  }
+  &__info {
+    position: relative;
+    max-width: 380px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 15px 35px 15px 40px;
+    border-left: 10px solid var(--cinnabar);
+    height: 100%;
+    @include tablet {
+      order: 3;
+      max-width: 550px;
+    }
+  }
+  &__text {
+    font: var(--contact-text);
+    color: var(--white);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 170px;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 50px 75px;
+    box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+    border-radius: 10px;
+    max-width: 550px;
+    @include tablet {
+      padding: 30px 40px;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+  &__btn {
+    max-width: 230px;
+    @include mobile {
+      max-width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__name,
+  &__mail {
+    margin-bottom: 30px;
+  }
+
+  &__label,
+  &__input {
+    display: block;
+    width: 100%;
+  }
+  &__label {
+    margin-bottom: 10px;
+    font: var(--section-text);
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 100px;
+      @include mobile {
+        margin-right: 50px;
+      }
+    }
+  }
+  &__logo-img {
+    @include mobile {
+      max-width: 80%;
+    }
+  }
+  &__link {
+    font: var(--bottom-menu);
+    text-transform: uppercase;
+    color: var(--white);
+    transition: text-shadow 0.1s ease-in-out;
+    &:hover {
+      text-shadow: 0px 4px 8px rgba($color: #ffffff, $alpha: 0.5);
+    }
+  }
+}

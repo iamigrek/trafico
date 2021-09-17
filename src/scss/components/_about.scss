@@ -1,0 +1,64 @@
+.about {
+  padding: 150px 0 150px;
+  @include tablet {
+    padding: 100px 0 100px;
+  }
+  @include mobile {
+    padding-top: 200px;
+  }
+  &__container {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 575px;
+      height: 480px;
+      background-image: url(../img/about-bg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include tablet {
+        width: 361px;
+        height: 288px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      @include mobile {
+        top: -235px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  &__title {
+    margin: 70px 0 40px;
+    max-width: 470px;
+  }
+  &__text {
+    font: var(--section-text);
+    max-width: 470px;
+    margin-bottom: 70px;
+    @include tablet {
+      max-width: 400px;
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      max-width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  &__question {
+    font: var(--big-text);
+    background-color: var(--cinderella);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 30px 55px 30px 45px;
+    border-left: 10px solid var(--cinnabar);
+    max-width: 570px;
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,167 @@
+.faq {
+  padding: 225px 0 100px;
+  position: relative;
+  @include mobile {
+    padding-top: 330px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1170px;
+    height: 100%;
+    background-color: var(--provincial-pink);
+    border-top-left-radius: 180px;
+    z-index: -1;
+  }
+  &__container {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: -100px;
+      width: 641px;
+      height: 499px;
+      background-image: url(../img/faq-bg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include tablet {
+        width: 403px;
+        height: 283px;
+      }
+      @include mobile {
+        top: -300px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 55px;
+    max-width: 550px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  &__big-title {
+    max-width: 550px;
+    margin-bottom: 170px;
+    @include tablet {
+      max-width: 450px;
+      font: var(--main-subtitle-tablet);
+    }
+    @include mobile {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  &__more-btn {
+    float: right;
+    width: calc(50% - 10px);
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      text-align: center;
+    }
+  }
+}
+
+.accordion {
+  columns: 2;
+  margin: 0;
+  @include tablet {
+    columns: 1;
+  }
+  .accordion__item {
+    width: 100%;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    .accordion__btn {
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+      @include tablet {
+        padding-right: 60px;
+      }
+      @include mobile {
+        font: var(--faq-title-mobile);
+      }
+      &-status {
+        display: block;
+        position: absolute;
+        height: 40px;
+        width: 20px;
+        right: 35px;
+        top: 75%;
+        transform: translate(0, -75%);
+        @include mobile {
+          top: 85%;
+        }
+        &:after {
+          content: "";
+          width: 20px;
+          height: 2px;
+          background-color: var(--cinnabar);
+          position: absolute;
+          top: 6px;
+        }
+        &:before {
+          content: "";
+          width: 20px;
+          height: 2px;
+          background-color: var(--cinnabar);
+          position: absolute;
+          top: 6px;
+          transform: rotate(90deg);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    .accordion__text {
+      @include mobile {
+        font: var(--faq-text-mobile);
+      }
+    }
+    .accordion__info {
+      transition: all 0.2s ease-in-out;
+      height: auto;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    &.active {
+      .accordion__btn {
+        &-status {
+          &::before {
+            transform: rotate(0deg);
+          }
+        }
+      }
+      .accordion__info {
+        padding: 40px 35px 60px;
+        opacity: 1;
+        background: var(--sauvignon);
+        box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+        border-radius: 10px;
+        max-height: 1000px;
+        margin-bottom: 40px;
+        @include mobile {
+          padding: 20px 35px 30px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
